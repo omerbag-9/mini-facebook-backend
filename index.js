@@ -11,7 +11,7 @@ import { commentRouter } from './src/modules/comment/comment.router.js'
 
 
 const app = express()
-const port = 3000
+const port = process.env.Port || 3000
 app.use(express.json())
 app.use('/users',userRouter)
 app.use('/posts',postRouter)
